@@ -82,9 +82,9 @@ footer a{color:#4a90d9;text-decoration:none}
   <h1>🌍 零元环游世界</h1>
   <p>当你没钱但想去世界看看时，信息就是你的货币。<br>这不是穷游攻略——这是信息差致富指南。</p>
   <div class="stats">
-    <div class="stat"><span class="num">40+</span><span class="label">旅行方法</span></div>
-    <div class="stat"><span class="num">65+</span><span class="label">平台资源</span></div>
-    <div class="stat"><span class="num">7</span><span class="label">行动阶段</span></div>
+    <div class="stat"><span class="num">55+</span><span class="label">旅行方法</span></div>
+    <div class="stat"><span class="num">80+</span><span class="label">平台资源</span></div>
+    <div class="stat"><span class="num">8</span><span class="label">分类导航</span></div>
   </div>
 </header>
 
@@ -129,6 +129,7 @@ const categories = [
   {id:'earn-travel',emoji:'💼',name:'边赚边玩',desc:'教英语/数字游民/季节性工作'},
   {id:'extreme-budget',emoji:'🎯',name:'极致省钱术',desc:'信用卡点数/露营/志愿旅行'},
   {id:'from-china',emoji:'🇨🇳',name:'从中国出发',desc:'国内平台/中国护照专属/出国防坑'},
+  {id:'visa-hacks',emoji:'🛂',name:'签证信息差',desc:'WHV打工度假/数字游民签/签证组合技'},
 ];
 
 const methods = [
@@ -187,6 +188,22 @@ const methods = [
   {cat:'from-china',name:'西部穷游：藏新川青',en:'',desc:'西藏、新疆、川西、青海——国内最像"异国"的目的地，但花费极低。搭车+露营+青旅组合，日均¥50-100。',detail:'成都到拉萨318国道搭车文化浓厚；新疆喀什到塔县拼车¥100；青海环湖租自行车¥50/天。这些地方甚至不需要出国就能体验完全不同的文化和风景。',badge:'cheap',links:[]},
   {cat:'from-china',name:'EASIN / Gapper 国际义工',en:'',desc:'国内最大的国际义工旅行机构。交项目费（¥2,000-8,000），包住宿+接机+当地协调。',detail:'虽然比纯DIY贵，但对第一次出国的中国护照持有者友好——免去自己联系国外host的语言和信任门槛。项目地：巴厘岛、泰国、斯里兰卡、肯尼亚等。',badge:'cheap',links:[{t:'EASIN国际义工',u:'https://www.easin.com'},{t:'Gapper国际义工',u:'https://www.gappernet.org'}]},
   {cat:'from-china',name:'境外游必备工具',en:'',desc:'Google Maps离线导航、Google Translate拍照翻译、Grab打车（东南亚）、Klook订门票——行前装好这些APP。',detail:'SIM卡：淘宝提前买当地SIM卡¥30-50，比到了再买便宜5倍。换汇：支付宝汇率通常比银行柜台好。境外取现：华夏银行卡境外每月前3笔免手续费。',badge:'cheap',links:[]},
+
+  // ===== 签证信息差 =====
+  {cat:'visa-hacks',name:'🇦🇺 澳洲WHV（462签证）',en:'Working Holiday Visa Australia',desc:'澳大利亚打工度假签证——31岁以下、大专以上即可申请。合法全职工作+旅行，时薪$24+澳元。',detail:'费用：签证费$635澳元（约¥3,000）。名额5000个/年，抽签制。可续二签（做88天农场工）和三签（再做6个月）。高薪农场/工厂/服务业，很多人一年攒$20,000-40,000澳元。关键：抢名额靠运气，但一旦拿到就是人生转折。',badge:'earn',links:[{t:'澳洲移民局462',u:'https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462'},{t:'WHV攻略(豆瓣)',u:'https://www.douban.com/group/whv/'}]},
+  {cat:'visa-hacks',name:'🇳🇿 新西兰WHV',en:'Working Holiday Visa NZ',desc:'新西兰打工度假——中国护照1000个名额/年，30岁以下。时薪$23+纽币，风景全球顶级。',detail:'费用：签证费NZ$455（约¥2,000）。每年通常在5-6月开放抢名额，几分钟抢光。可延期3个月（做农场工）。新西兰最低工资全球最高之一，且工作环境好。',badge:'earn',links:[{t:'新西兰移民局WHV',u:'https://www.immigration.govt.nz/new-zealand-visas/visas/visa/china-working-holiday-visa'}]},
+  {cat:'visa-hacks',name:'🇯🇵 日本WHV',en:'Japan Working Holiday',desc:'日本打工度假——18-30岁，每年分两批（4月/10月），共5000个名额给中国大陆。',detail:'签证免费！在东京/大阪打工度假，时薪¥1,000-1,500日元。可做便利店、餐厅、滑雪场、农业等。日语N4以上更容易找工作。签证有效期1年，不可延长。',badge:'earn',links:[{t:'日本WHV(外务省)',u:'https://www.mofa.go.jp/j_info/visit/w_holiday/'}]},
+  {cat:'visa-hacks',name:'🇰🇷 韩国H-1打工度假',en:'Korea Working Holiday',desc:'韩国打工度假签证——18-30岁，每年800个名额。首尔/釜山打工换旅行。',detail:'签证免费！可在韩国合法打工（每周限25小时），时薪约₩10,000韩元。韩国签证通过率极高，几乎是申请就给。有效期1年。',badge:'earn',links:[{t:'韩国H-1签证',u:'https://www.visa.go.kr'}]},
+  {cat:'visa-hacks',name:'🇩🇪🇫🇷 欧洲WHV',en:'Europe Working Holiday',desc:'德国、法国、爱尔兰、奥地利等对中国开放打工度假签证——很少有人申请的隐藏宝藏。',detail:'德国WHV每年名额用不完，竞争极低。法国WHV要求基本法语。爱尔兰WHV时薪€13+。欧洲WHV最大的好处：申根区自由通行，打工一个国家玩遍整个欧洲。',badge:'earn',links:[{t:'德国WHV',u:'https://china.diplo.de/cn-zh/service/visa-einreise/working-holiday'},{t:'法国WHV',u:'https://cn.ambafrance.org'}]},
+  {cat:'visa-hacks',name:'十年美签的隐藏福利',en:'US B1/B2 → Visa-Free Entry',desc:'拿到美国10年旅游签（B1/B2）后，可免签进入20+国家——墨西哥、菲律宾、智利、秘鲁、哥伦比亚等。',detail:'菲律宾免签7天（可延14天）= 不用办菲律宾签证。墨西哥180天。智利90天。巴拿马、哥斯达黎加、格鲁吉亚等也可凭美签免签。一张美签($185)撬开半个拉美+东南亚。',badge:'cheap',links:[{t:'美签免签国清单',u:'https://zh.wikipedia.org/wiki/美国签证政策'}]},
+  {cat:'visa-hacks',name:'申根签"选国策略"',en:'Schengen Easy-Entry Strategy',desc:'申根26国统一签证，但不同国家通过率天差地别——选法国/意大利/西班牙比德国/瑞士容易3倍。',detail:'信息差：法签给得最长（5年多次很常见），德签最严。申请时选"行程中停留最长的国家"，但实际入境后去哪没人管。淘宝¥1000-1500代办，材料准备简单。',badge:'cheap',links:[]},
+  {cat:'visa-hacks',name:'数字游民签证全家桶',en:'Digital Nomad Visas',desc:'专门为远程工作者设计的签证——葡萄牙D8、爱沙尼亚、克罗地亚、泰国DTV、马来西亚DE Rantau、迪拜。',detail:'泰国DTV（Destination Thailand Visa）：月入$1,500美元证明即可，5年有效期，多次往返，费用仅¥2,000。马来西亚DE Rantau：月入$2,000可获1年签证。葡萄牙D8：月入€3,280可获2年居留，通向欧盟永居。',badge:'cheap',links:[{t:'泰国DTV签证',u:'https://www.thaievisa.go.th'},{t:'葡萄牙D8签证',u:'https://vistos.mne.gov.pt'}]},
+  {cat:'visa-hacks',name:'日本3/5年多次签',en:'Japan Multi-Entry',desc:'日本三年/五年多次往返签证——办一次，每个周末都能飞东京。比单次签证更省钱。',detail:'三年多次：年收入¥10万以上证明即可。五年多次：年收入¥20万以上。一旦有了多次签，春秋¥99/¥199机票随时走。很多人的信息差：多次签比想象中容易拿到。',badge:'cheap',links:[]},
+  {cat:'visa-hacks',name:'语言学校 → 半工半读',en:'Language School + Part-Time Work',desc:'在日本/韩国/法国/德国读语言学校，持学生签证合法打工28小时/周——学语言+赚钱+旅行三合一。',detail:'日本语学校一年学费约¥4-6万，但打工收入完全可以覆盖生活费（月入¥8,000-12,000）。韩国语学堂类似。这是很多人不知道的"低成本长居海外"的方式——不是留学，是语校半工半读。',badge:'earn',links:[{t:'日本语学校搜索',u:'https://www.nisshinkyo.org'}]},
+  {cat:'visa-hacks',name:'东南亚签证跑（Border Run）',en:'Southeast Asia Border Run',desc:'在泰国/印尼/菲律宾等免签国之间"签证跑"——免签到期前出境再入境，刷新停留天数。',detail:'泰国免签30天，到期可以去柬埔寨/老挝/缅甸边境一日游再回来刷新30天。马来西亚免签30天→去新加坡当日往返刷新。很多人靠这套方法在东南亚旅居半年以上不办签证。注意航空入境比陆路入境被盘问概率低。',badge:'risky',links:[]},
+  {cat:'visa-hacks',name:'塞尔维亚 → 欧盟跳板',en:'Serbia → EU Gateway',desc:'塞尔维亚对中国护照免签30天，且是欧盟候选国——很多人在塞国申请申根签证，更容易拿到。',detail:'贝尔格莱德生活成本极低（月€400-600），数字游民社区庞大。从塞国申请法国/意大利申根签，通过率高于在国内申请。塞国自己也在推数字游民签证（待立法）。',badge:'free',links:[]},
+  {cat:'visa-hacks',name:'英国2年/5年多次签',en:'UK Multi-Entry',desc:'英国标准访问签证可选2年/5年/10年多次——2年多次仅¥900左右，比单次贵不了多少。',detail:'大多数人默认申请6个月单次，但你可以主动要求2年多次——价格只贵一点。有了英签还可以免签去爱尔兰（英爱共同旅行区）。',badge:'cheap',links:[]},
+  {cat:'visa-hacks',name:'签证组合技',en:'Visa Combo Strategy',desc:'核心策略：拿到1-2个"锚点签证"（美签+申根），其余目的地利用免签/落地签串联，实现真正的全球自由行。',detail:'示例路线：中国→（澳洲WHV）攒钱$20,000→（申根签）欧洲3月→（美签）拉美3月→（免签）东南亚2月→回中国。总费用$8,000-10,000玩一年，且净赚$10,000+。信息差不是"哪个签证便宜"，而是"哪些签证能组成持续可滚动的旅行链"。',badge:'free',links:[]},
 ];
 
 const steps = [
@@ -278,7 +295,7 @@ function filterMethods() {
 
 // Search tags
 function updateSearchTags(q) {
-  const tags = ['打工换宿','沙发客','看家','机票','信用卡','教英语','露营','搭车','数字游民','互惠生','豆瓣','春秋','寺庙','青旅','免签','代购','小红书'];
+  const tags = ['打工换宿','沙发客','看家','机票','信用卡','教英语','露营','搭车','数字游民','互惠生','豆瓣','春秋','寺庙','青旅','免签','代购','小红书','WHV','申根','美签','签证','澳洲','日本'];
   if (!q) {
     document.getElementById('searchTags').innerHTML = tags.map(t=>`<button class="search-tag" onclick="quickSearch('${t}')">${t}</button>`).join('');
     return;

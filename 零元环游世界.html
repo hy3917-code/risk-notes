@@ -44,6 +44,7 @@ nav button.active{background:#4a90d9;border-color:#4a90d9;color:#fff}
 .badge-cheap{background:rgba(250,176,5,0.15);color:#fab005}
 .badge-earn{background:rgba(168,85,247,0.15);color:#a855f7}
 .badge-risky{background:rgba(233,69,96,0.15);color:#e94560}
+.badge-mainland{display:inline-block;background:rgba(34,197,94,0.12);color:#22c55e;font-size:0.65rem;padding:1px 6px;border-radius:50px;font-weight:600;letter-spacing:0.2px}
 .method-card .desc{font-size:0.88rem;color:#8892b0;margin-bottom:12px;line-height:1.6}
 .method-card .detail{font-size:0.82rem;color:#6c7a9c}
 .links{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
@@ -190,11 +191,11 @@ const methods = [
   {cat:'from-china',name:'境外游必备工具',en:'',desc:'Google Maps离线导航、Google Translate拍照翻译、Grab打车（东南亚）、Klook订门票——行前装好这些APP。',detail:'SIM卡：淘宝提前买当地SIM卡¥30-50，比到了再买便宜5倍。换汇：支付宝汇率通常比银行柜台好。境外取现：华夏银行卡境外每月前3笔免手续费。',badge:'cheap',links:[]},
 
   // ===== 签证信息差 =====
-  {cat:'visa-hacks',name:'🇦🇺 澳洲WHV（462签证）',en:'Working Holiday Visa Australia',desc:'澳大利亚打工度假签证——31岁以下、大专以上即可申请。合法全职工作+旅行，时薪$24+澳元。',detail:'费用：签证费$635澳元（约¥3,000）。名额5000个/年，抽签制。可续二签（做88天农场工）和三签（再做6个月）。高薪农场/工厂/服务业，很多人一年攒$20,000-40,000澳元。关键：抢名额靠运气，但一旦拿到就是人生转折。',badge:'earn',links:[{t:'澳洲移民局462',u:'https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462'},{t:'WHV攻略(豆瓣)',u:'https://www.douban.com/group/whv/'}]},
-  {cat:'visa-hacks',name:'🇳🇿 新西兰WHV',en:'Working Holiday Visa NZ',desc:'新西兰打工度假——中国护照1000个名额/年，30岁以下。时薪$23+纽币，风景全球顶级。',detail:'费用：签证费NZ$455（约¥2,000）。每年通常在5-6月开放抢名额，几分钟抢光。可延期3个月（做农场工）。新西兰最低工资全球最高之一，且工作环境好。',badge:'earn',links:[{t:'新西兰移民局WHV',u:'https://www.immigration.govt.nz/new-zealand-visas/visas/visa/china-working-holiday-visa'}]},
-  {cat:'visa-hacks',name:'🇯🇵 日本WHV',en:'Japan Working Holiday',desc:'日本打工度假——18-30岁，每年分两批（4月/10月），共5000个名额给中国大陆。',detail:'签证免费！在东京/大阪打工度假，时薪¥1,000-1,500日元。可做便利店、餐厅、滑雪场、农业等。日语N4以上更容易找工作。签证有效期1年，不可延长。',badge:'earn',links:[{t:'日本WHV(外务省)',u:'https://www.mofa.go.jp/j_info/visit/w_holiday/'}]},
-  {cat:'visa-hacks',name:'🇰🇷 韩国H-1打工度假',en:'Korea Working Holiday',desc:'韩国打工度假签证——18-30岁，每年800个名额。首尔/釜山打工换旅行。',detail:'签证免费！可在韩国合法打工（每周限25小时），时薪约₩10,000韩元。韩国签证通过率极高，几乎是申请就给。有效期1年。',badge:'earn',links:[{t:'韩国H-1签证',u:'https://www.visa.go.kr'}]},
-  {cat:'visa-hacks',name:'🇩🇪🇫🇷 欧洲WHV',en:'Europe Working Holiday',desc:'德国、法国、爱尔兰、奥地利等对中国开放打工度假签证——很少有人申请的隐藏宝藏。',detail:'德国WHV每年名额用不完，竞争极低。法国WHV要求基本法语。爱尔兰WHV时薪€13+。欧洲WHV最大的好处：申根区自由通行，打工一个国家玩遍整个欧洲。',badge:'earn',links:[{t:'德国WHV',u:'https://china.diplo.de/cn-zh/service/visa-einreise/working-holiday'},{t:'法国WHV',u:'https://cn.ambafrance.org'}]},
+  {cat:'visa-hacks',name:'🇦🇺 澳洲WHV（462签证）',en:'Working Holiday Visa Australia',desc:'澳大利亚打工度假签证——31岁以下、大专以上即可申请。合法全职工作+旅行，时薪$24+澳元。',detail:'费用：签证费$635澳元（约¥3,000）。名额5000个/年，抽签制。可续二签（做88天农场工）和三签（再做6个月）。高薪农场/工厂/服务业，很多人一年攒$20,000-40,000澳元。关键：抢名额靠运气，但一旦拿到就是人生转折。',badge:'earn',mainland:true,links:[{t:'澳洲移民局462',u:'https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462'},{t:'WHV攻略(豆瓣)',u:'https://www.douban.com/group/whv/'}]},
+  {cat:'visa-hacks',name:'🇳🇿 新西兰WHV',en:'Working Holiday Visa NZ',desc:'新西兰打工度假——中国护照1000个名额/年，30岁以下。时薪$23+纽币，风景全球顶级。',detail:'费用：签证费NZ$455（约¥2,000）。每年通常在5-6月开放抢名额，几分钟抢光。可延期3个月（做农场工）。新西兰最低工资全球最高之一，且工作环境好。',badge:'earn',mainland:true,links:[{t:'新西兰移民局WHV',u:'https://www.immigration.govt.nz/new-zealand-visas/visas/visa/china-working-holiday-visa'}]},
+  {cat:'visa-hacks',name:'🇯🇵 日本WHV',en:'Japan Working Holiday',desc:'日本打工度假——18-30岁，每年分两批（4月/10月），共5000个名额给中国大陆。',detail:'签证免费！在东京/大阪打工度假，时薪¥1,000-1,500日元。可做便利店、餐厅、滑雪场、农业等。日语N4以上更容易找工作。签证有效期1年，不可延长。',badge:'earn',mainland:true,links:[{t:'日本WHV(外务省)',u:'https://www.mofa.go.jp/j_info/visit/w_holiday/'}]},
+  {cat:'visa-hacks',name:'🇰🇷 韩国H-1打工度假',en:'Korea Working Holiday',desc:'韩国打工度假签证——18-30岁，每年800个名额。首尔/釜山打工换旅行。',detail:'签证免费！可在韩国合法打工（每周限25小时），时薪约₩10,000韩元。韩国签证通过率极高，几乎是申请就给。有效期1年。',badge:'earn',mainland:true,links:[{t:'韩国H-1签证',u:'https://www.visa.go.kr'}]},
+  {cat:'visa-hacks',name:'🇩🇪🇫🇷 欧洲WHV',en:'Europe Working Holiday',desc:'德国、法国、爱尔兰、奥地利等对中国大陆开放打工度假签证——很少有人申请的隐藏宝藏。',detail:'德国WHV每年名额用不完，竞争极低。法国WHV要求基本法语。爱尔兰WHV时薪€13+。欧洲WHV最大的好处：申根区自由通行，打工一个国家玩遍整个欧洲。',badge:'earn',mainland:true,links:[{t:'德国WHV',u:'https://china.diplo.de/cn-zh/service/visa-einreise/working-holiday'},{t:'法国WHV',u:'https://cn.ambafrance.org'}]},
   {cat:'visa-hacks',name:'十年美签的隐藏福利',en:'US B1/B2 → Visa-Free Entry',desc:'拿到美国10年旅游签（B1/B2）后，可免签进入20+国家——墨西哥、菲律宾、智利、秘鲁、哥伦比亚等。',detail:'菲律宾免签7天（可延14天）= 不用办菲律宾签证。墨西哥180天。智利90天。巴拿马、哥斯达黎加、格鲁吉亚等也可凭美签免签。一张美签($185)撬开半个拉美+东南亚。',badge:'cheap',links:[{t:'美签免签国清单',u:'https://zh.wikipedia.org/wiki/美国签证政策'}]},
   {cat:'visa-hacks',name:'申根签"选国策略"',en:'Schengen Easy-Entry Strategy',desc:'申根26国统一签证，但不同国家通过率天差地别——选法国/意大利/西班牙比德国/瑞士容易3倍。',detail:'信息差：法签给得最长（5年多次很常见），德签最严。申请时选"行程中停留最长的国家"，但实际入境后去哪没人管。淘宝¥1000-1500代办，材料准备简单。',badge:'cheap',links:[]},
   {cat:'visa-hacks',name:'数字游民签证全家桶',en:'Digital Nomad Visas',desc:'专门为远程工作者设计的签证——葡萄牙D8、爱沙尼亚、克罗地亚、泰国DTV、马来西亚DE Rantau、迪拜。',detail:'泰国DTV（Destination Thailand Visa）：月入$1,500美元证明即可，5年有效期，多次往返，费用仅¥2,000。马来西亚DE Rantau：月入$2,000可获1年签证。葡萄牙D8：月入€3,280可获2年居留，通向欧盟永居。',badge:'cheap',links:[{t:'泰国DTV签证',u:'https://www.thaievisa.go.th'},{t:'葡萄牙D8签证',u:'https://vistos.mne.gov.pt'}]},
@@ -204,6 +205,7 @@ const methods = [
   {cat:'visa-hacks',name:'塞尔维亚 → 欧盟跳板',en:'Serbia → EU Gateway',desc:'塞尔维亚对中国护照免签30天，且是欧盟候选国——很多人在塞国申请申根签证，更容易拿到。',detail:'贝尔格莱德生活成本极低（月€400-600），数字游民社区庞大。从塞国申请法国/意大利申根签，通过率高于在国内申请。塞国自己也在推数字游民签证（待立法）。',badge:'free',links:[]},
   {cat:'visa-hacks',name:'英国2年/5年多次签',en:'UK Multi-Entry',desc:'英国标准访问签证可选2年/5年/10年多次——2年多次仅¥900左右，比单次贵不了多少。',detail:'大多数人默认申请6个月单次，但你可以主动要求2年多次——价格只贵一点。有了英签还可以免签去爱尔兰（英爱共同旅行区）。',badge:'cheap',links:[]},
   {cat:'visa-hacks',name:'签证组合技',en:'Visa Combo Strategy',desc:'核心策略：拿到1-2个"锚点签证"（美签+申根），其余目的地利用免签/落地签串联，实现真正的全球自由行。',detail:'示例路线：中国→（澳洲WHV）攒钱$20,000→（申根签）欧洲3月→（美签）拉美3月→（免签）东南亚2月→回中国。总费用$8,000-10,000玩一年，且净赚$10,000+。信息差不是"哪个签证便宜"，而是"哪些签证能组成持续可滚动的旅行链"。',badge:'free',links:[]},
+  {cat:'visa-hacks',name:'⚠️ WHV避坑：只给台港澳不给内地',en:'WHV Exclusion List',desc:'以下国家/地区的WHV不接受中国大陆护照，只对台湾/香港/澳门开放。别浪费时间准备材料。',detail:'❌ 加拿大IEC（最常踩的坑，网上攻略大多是台湾人写的）| ❌ 英国Youth Mobility Scheme | ❌ 荷兰WHV | ❌ 比利时WHV | ❌ 丹麦WHV | ❌ 挪威WHV | ❌ 瑞典WHV | ❌ 芬兰WHV | ❌ 冰岛WHV | ❌ 瑞士WHV | ❌ 波兰WHV | ❌ 捷克WHV | ❌ 匈牙利WHV。以上全部只接受台湾/香港护照，内地护照无法申请。看到攻略前先确认作者是哪里的护照。',badge:'risky',links:[]},
 ];
 
 const steps = [
@@ -247,7 +249,7 @@ function buildContent(filter='all',search='') {
     filtered.forEach(m=>{
       html += `<div class="method-card" data-search-text="${m.name} ${m.desc} ${m.detail} ${m.en||''}">
         <button class="bookmark" onclick="toggleBookmark('${m.name}',this)" title="收藏">★</button>
-        <h3>${m.name} <span class="badge badge-${m.badge}">${m.badge==='free'?'免费':m.badge==='cheap'?'低成本':m.badge==='earn'?'赚钱':m.badge==='risky'?'需谨慎':''}</span></h3>
+        <h3>${m.name} <span class="badge badge-${m.badge}">${m.badge==='free'?'免费':m.badge==='cheap'?'低成本':m.badge==='earn'?'赚钱':m.badge==='risky'?'需谨慎':''}</span>${m.mainland?' <span class="badge-mainland">内地可用</span>':''}</h3>
         ${m.en ? `<p style="font-size:0.78rem;color:#6c7a9c;margin-bottom:6px;font-style:italic">${m.en}</p>` : ''}
         <p class="desc">${m.desc}</p>
         <p class="detail">${m.detail}</p>

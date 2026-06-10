@@ -83,8 +83,8 @@ footer a{color:#4a90d9;text-decoration:none}
   <h1>🌍 零元环游世界</h1>
   <p>当你没钱但想去世界看看时，信息就是你的货币。<br>这不是穷游攻略——这是信息差致富指南。</p>
   <div class="stats">
-    <div class="stat"><span class="num">55+</span><span class="label">旅行方法</span></div>
-    <div class="stat"><span class="num">80+</span><span class="label">平台资源</span></div>
+    <div class="stat"><span class="num">68+</span><span class="label">旅行方法</span></div>
+    <div class="stat"><span class="num">95+</span><span class="label">平台资源</span></div>
     <div class="stat"><span class="num">8</span><span class="label">分类导航</span></div>
   </div>
 </header>
@@ -206,6 +206,18 @@ const methods = [
   {cat:'visa-hacks',name:'英国2年/5年多次签',en:'UK Multi-Entry',desc:'英国标准访问签证可选2年/5年/10年多次——2年多次仅¥900左右，比单次贵不了多少。',detail:'大多数人默认申请6个月单次，但你可以主动要求2年多次——价格只贵一点。有了英签还可以免签去爱尔兰（英爱共同旅行区）。',badge:'cheap',links:[]},
   {cat:'visa-hacks',name:'签证组合技',en:'Visa Combo Strategy',desc:'核心策略：拿到1-2个"锚点签证"（美签+申根），其余目的地利用免签/落地签串联，实现真正的全球自由行。',detail:'示例路线：中国→（澳洲WHV）攒钱$20,000→（申根签）欧洲3月→（美签）拉美3月→（免签）东南亚2月→回中国。总费用$8,000-10,000玩一年，且净赚$10,000+。信息差不是"哪个签证便宜"，而是"哪些签证能组成持续可滚动的旅行链"。',badge:'free',links:[]},
   {cat:'visa-hacks',name:'⚠️ WHV避坑：只给台港澳不给内地',en:'WHV Exclusion List',desc:'以下国家/地区的WHV不接受中国大陆护照，只对台湾/香港/澳门开放。别浪费时间准备材料。',detail:'❌ 加拿大IEC（最常踩的坑，网上攻略大多是台湾人写的）| ❌ 英国Youth Mobility Scheme | ❌ 荷兰WHV | ❌ 比利时WHV | ❌ 丹麦WHV | ❌ 挪威WHV | ❌ 瑞典WHV | ❌ 芬兰WHV | ❌ 冰岛WHV | ❌ 瑞士WHV | ❌ 波兰WHV | ❌ 捷克WHV | ❌ 匈牙利WHV。以上全部只接受台湾/香港护照，内地护照无法申请。看到攻略前先确认作者是哪里的护照。',badge:'risky',links:[]},
+  {cat:'visa-hacks',name:'🇫🇮 芬兰季节性工签',en:'Finland Seasonal Work Visa',desc:'芬兰夏季（5-9月）大量招外国短期工——摘野莓、农场、林业，3-6个月签证，月薪€2,000-3,000。',detail:'野莓采摘（蓝莓/云莓/越橘）是芬兰传统——不需要经验，农场包住宿。申请时间：每年1-4月，签证费€90。很多中国东北人去芬兰摘莓季赚¥5-8万/季。通过芬兰TE办公室或直接联系农场。',badge:'earn',mainland:true,links:[{t:'芬兰移民局季节性工签',u:'https://migri.fi/en/seasonal-work'},{t:'芬兰TE办公室',u:'https://toimistot.te-palvelut.fi'}]},
+  {cat:'visa-hacks',name:'🇺🇸 美国SWT（暑期打工旅行）',en:'Summer Work & Travel J-1',desc:'美国J-1暑期打工旅行签证——在校大学生暑假去美国工作3-4个月，包吃住。',detail:'费用：项目费¥15,000-20,000（含签证+保险+安置）。工作类型：国家公园、游乐场、度假村、酒店、水上乐园等。时薪$12-18，3个月可赚$6,000-10,000，覆盖所有花费后还有盈余。条件：18-28岁全日制在校生，基本英语。每年10月开始申请次年暑期项目。',badge:'earn',mainland:true,links:[{t:'美国国务院SWT',u:'https://j1visa.state.gov/programs/summer-work-travel'},{t:'CIEE(最大Sponsor)',u:'https://www.ciee.org'}]},
+  {cat:'visa-hacks',name:'🇺🇸 美国ITP实习签证',en:'Intern/Trainee Program J-1',desc:'J-1实习/培训签证——毕业生在美国专业实习12-18个月，带薪，酒店/金融/IT等行业。',detail:'Internship：在校生或毕业12个月内，最长12个月。Trainee：毕业1年以上+1年工作经验，最长18个月。费用：项目费$3,000-5,000。月薪$2,500-5,000。比H1B容易100倍，是低成本获取美国工作经验的最佳路径。',badge:'earn',mainland:true,links:[{t:'美国J-1 Intern/Trainee',u:'https://j1visa.state.gov/programs/intern'}]},
+  {cat:'visa-hacks',name:'🇩🇪 德国双元制 (Ausbildung)',en:'German Dual Vocational Training',desc:'德国双元制职业教育——一边在德国企业上班拿工资（€800-1,200/月），一边在职业学校学技术。',detail:'双元制=工作+学习。专业：护理、酒店管理、IT、机电、烘焙、厨师等。企业支付学费+发工资，毕业后直接就业，平均起薪€2,500-3,500/月。德语B1以上即可申请。很多人不知道：双元制不是留学，是带薪培训——零学费还倒赚钱。',badge:'earn',mainland:true,links:[{t:'德国双元制官方',u:'https://www.make-it-in-germany.com/en/study-training/training/vocational-training'},{t:'德国劳工局职位',u:'https://www.arbeitsagentur.de'}]},
+  {cat:'visa-hacks',name:'🇩🇪 德国机会卡 (Chancenkarte)',en:'Germany Opportunity Card',desc:'2024年新推出的积分制找工作签证——大专以上+工作经验可获1年德国求职签证，期间可打工20小时/周。',detail:'评分项：学历、工作经验、年龄、德语/英语水平、德国居住史。满6分即可获得。签证费€75。进入德国后找到正式工作就转工签。门槛比传统蓝卡低很多，是德国最友好的移民通道。',badge:'cheap',mainland:true,links:[{t:'德国机会卡官方',u:'https://www.make-it-in-germany.com/en/visa-residence/job-search-opportunity-card'}]},
+  {cat:'visa-hacks',name:'🇵🇹 葡萄牙D7被动收入签证',en:'Portugal D7 Passive Income Visa',desc:'只要证明"被动收入"≥葡萄牙最低工资（€870/月≈¥7,000/月），就能拿2年居留，通向欧盟永居。',detail:'被动收入=房租、股息、理财收益、养老金、远程工资也算。门槛极低——€8,460/年≈¥67,000/年。很多人用远程工作月入¥7,000来申请D7，2年后续签3年，5年可申请永居/入籍。是欧盟最低门槛的长期居留路径。',badge:'cheap',mainland:true,links:[{t:'葡萄牙D7签证',u:'https://vistos.mne.gov.pt/en/national-visas/necessary-documentation/d7'}]},
+  {cat:'visa-hacks',name:'🇪🇸 西班牙非盈利签证 (NLV)',en:'Spain Non-Lucrative Visa',desc:'西班牙非盈利居留——证明有足够经济能力在西班牙生活即可，不需投资/工作。',detail:'经济门槛：年收入€28,800+（约¥23万）或存款充足。可带家属。1年签证→2年续→5年永居。最大优势：申根区自由通行，孩子可读西班牙公立学校。对数字游民友好——可以远程工作给非西班牙雇主。',badge:'cheap',mainland:true,links:[{t:'西班牙NLV签证',u:'https://www.exteriores.gob.es'}]},
+  {cat:'visa-hacks',name:'🇮🇪 爱尔兰语言学校+打工',en:'Ireland Language School + Work',desc:'在爱尔兰读25周英语课程，持学生签证合法打工——学期中20小时/周，假期40小时/周。',detail:'学费约€2,500-4,000/25周。打工最低时薪€12.70，月入€1,000-1,500完全覆盖生活费。课程结束后可续签（最长2年）。爱尔兰是英语国家+欧盟成员，是中国学生半工半读的最佳选择之一。',badge:'earn',mainland:true,links:[{t:'爱尔兰移民局',u:'https://www.irishimmigration.ie'}]},
+  {cat:'visa-hacks',name:'🇳🇱 荷兰Search Year签证',en:'Netherlands Orientation Year',desc:'世界排名前200大学的毕业生可申请荷兰1年求职签证（zoekjaar）——自由工作，无需雇主担保。',detail:'荷兰承认的大学名单包括中国多所985/211。签证费€228。一年内在荷兰自由工作/创业，找到工作后转高技术移民（起薪€2,631/月）。毕业3年内均可申请。很多人不知道这个——比美加移民容易得多。',badge:'cheap',mainland:true,links:[{t:'荷兰Search Year',u:'https://ind.nl/en/residence-permits/work/orientation-year-highly-educated-persons'}]},
+  {cat:'visa-hacks',name:'🇵🇱 波兰工签',en:'Poland Work Visa',desc:'波兰工作签证对中国人门槛极低——工厂、物流、餐饮大量招人，包住宿+月薪€700-1,200。',detail:'波兰在欧盟内但生活成本€400-600/月，工资足够生活+存钱。很多劳务中介包办签证+工作一条龙（费用¥15,000-20,000），但这属于灰色地带。正规途径：波兰劳工局官网直接找雇主。拿到波兰工签=申根区自由通行。',badge:'earn',mainland:true,links:[{t:'波兰劳工局',u:'https://psz.praca.gov.pl'}]},
+  {cat:'visa-hacks',name:'🇨🇦 加拿大农业/护理工签',en:'Canada Agri-Food / Caregiver Pilot',desc:'加拿大IEC不对中国开放，但农业食品试点(AFPP)和护理移民试点(HSW/CCP)是对中国内地最友好的工签路径。',detail:'农业食品：屠宰/食品加工/农场工人1年经验可申PR，不需学历。护理移民：家庭护理/儿童护理1年经验可申PR。雅思4分即可。这两个项目专为没有IEC资格的国家设计——加拿大政府特意留的后门。',badge:'earn',mainland:true,links:[{t:'加拿大AFPP',u:'https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/agri-food-pilot.html'},{t:'加拿大护理移民',u:'https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/caregivers.html'}]},
+  {cat:'visa-hacks',name:'🇦🇹 奥地利红白红卡',en:'Austria Red-White-Red Card',desc:'奥地利积分制技术移民——大专以上+相关工作经验可获2年工作签证，年薪€31,000起。',detail:'评分项：学历、工作经验、语言、年龄、奥地利专业需求匹配度。满55分即可获签。优势：奥地利位于欧洲中心，拿到就是申根区自由通行+通向5年永居。AI/IT/工程/护理专业加分最多。',badge:'earn',mainland:true,links:[{t:'奥地利红白红卡',u:'https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/red-white-red-card/'}]},
 ];
 
 const steps = [
@@ -297,7 +309,7 @@ function filterMethods() {
 
 // Search tags
 function updateSearchTags(q) {
-  const tags = ['打工换宿','沙发客','看家','机票','信用卡','教英语','露营','搭车','数字游民','互惠生','豆瓣','春秋','寺庙','青旅','免签','代购','小红书','WHV','申根','美签','签证','澳洲','日本'];
+  const tags = ['打工换宿','沙发客','看家','机票','信用卡','教英语','露营','搭车','数字游民','互惠生','豆瓣','春秋','寺庙','青旅','免签','代购','小红书','WHV','申根','美签','签证','澳洲','日本','双元制','D7','SWT','芬兰','德国'];
   if (!q) {
     document.getElementById('searchTags').innerHTML = tags.map(t=>`<button class="search-tag" onclick="quickSearch('${t}')">${t}</button>`).join('');
     return;
